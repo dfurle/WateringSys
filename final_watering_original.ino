@@ -7,14 +7,14 @@
 #include <LiquidCrystal_I2C.h>
 //#include "Keyboard.h"
 
-#define DT 1
-//184
+#define DT 5
+//184 
 
 //                  s0,s1,s2,s3
 int controlPin[] = {5 ,4 ,3 ,2 };           //x1  x2                              x1 
 //                                1  ,2  ,3  ,4  ,5  ,6  ,7  ,8  ,9  ,10 ,11 ,12 ,13 ,14 ,15 ,16
 unsigned int WaterTime[NCHAN] =  {DT ,DT ,DT ,DT ,DT ,DT ,40 ,DT ,DT ,DT ,DT ,40 ,DT ,DT ,DT ,DT};
-unsigned char Status[NCHAN] =    {1  ,1  ,1  ,0  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,0  ,1  ,1  ,1};
+unsigned char Status[NCHAN] =    {0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  ,1  ,1  ,1  ,0  ,1  ,1  ,1};
 unsigned char HumiSens[NCHAN] = {};
 unsigned char TimeLeft[NCHAN] = {};
 int muxChannel[16][4]={ {0,0,0,0},{1,0,0,0},{0,1,0,0},{1,1,0,0},
